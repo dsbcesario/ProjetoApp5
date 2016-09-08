@@ -19,6 +19,12 @@ app.factory('TodoService', function(){
 
       return tarefas;
 
+    },
+
+    create : function(tarefa) {
+
+      tarefas.push(tarefa);
+
     }
     
   }
