@@ -9,13 +9,13 @@ app.controller('ListaCtrl', function($scope, TodoService, $state) {
     
   }
   
-  $scope.concluir = function(id) { // o parametro dentro da function é o msm q vem depois de id:
+  $scope.concluir = function(id) { 
     
     TodoService.concluir(id);
     
   }
   
-  $scope.apagar = function(id) { // o parametro dentro da function é o msm q vem depois de id:
+  $scope.apagar = function(id) { 
     
     TodoService.apagar(id);
     

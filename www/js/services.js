@@ -57,7 +57,7 @@ app.factory('TodoService', function () {
 
          if (tarefas[i].id == id) {
 
-          tarefas[i].concluida = true;
+          tarefas[i].concluida = !tarefas[i].concluida;
           break;
           
         }
