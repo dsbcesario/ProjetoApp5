@@ -20,6 +20,8 @@
                 <!--<i class="{{(t.concluida ? 'ion-android-done-all' : 'ion-android-done')}}"></i>-->
                 <i ng-class="{&apos;icon ion-android-done-all&apos; : t.concluida, &apos;icon ion-android-done&apos; : !t.concluida}"></i>
                 {{t.texto}}
+                <ion-option-button class="button-positive icon-left ion-checkmark-round" ng-click="concluir(t.id)">Concluir</ion-option-button>
+                <ion-option-button class="button-assertive icon-left ion-trash-a" ng-click="apagar(t.id)">Apagar</ion-option-button>
             </ion-item>
         </ion-list>
 

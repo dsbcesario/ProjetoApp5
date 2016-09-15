@@ -49,7 +49,32 @@ app.factory('TodoService', function () {
           break;
         }
       }
-    }
-  }
+    },
+    
+    concluir: function (id) { // irá alterar o atributo concluido de falso para verdadeiro
+      
+      for (var i = 0; i < tarefas.length; i++) {
 
+         if (tarefas[i].id == id) {
+
+          tarefas[i].concluida = true;
+          break;
+          
+        }
+      }
+    },
+    
+    apagar: function (id) { // irá apagar a tarefa
+
+      for(var i = 0; i < tarefas.length; i++) {
+        
+        if(tarefas[i].id == id) {
+          
+          tarefas.splice(i, 1);
+          break;
+          
+        }        
+      }
+    }    
+  }
 });

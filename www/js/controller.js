@@ -8,6 +8,18 @@ app.controller('ListaCtrl', function($scope, TodoService, $state) {
     $state.go('edita', {id: id})
     
   }
+  
+  $scope.concluir = function(id) { // o parametro dentro da function é o msm q vem depois de id:
+    
+    TodoService.concluir(id);
+    
+  }
+  
+  $scope.apagar = function(id) { // o parametro dentro da function é o msm q vem depois de id:
+    
+    TodoService.apagar(id);
+    
+  }
 
 });
 
