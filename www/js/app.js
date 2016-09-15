@@ -19,13 +19,18 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider.state('lista', {
     url: '/lista',
     templateUrl : 'templates/lista.html'
-
   });
 
   $stateProvider.state('novo', {
     url: '/novo',
-    templateUrl : 'templates/novo.html'
-
+    templateUrl : 'templates/novo.html',
+    controller: 'NovoCtrl'
+  });
+  
+  $stateProvider.state('edita', {
+    url: '/edita/:id',
+    templateUrl : 'templates/novo.html',
+    controller: 'EditaCtrl'
   });
 
   $urlRouterProvider.otherwise('/lista'); //a pagina inicial é sempre lista

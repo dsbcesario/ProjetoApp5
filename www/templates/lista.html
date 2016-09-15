@@ -16,7 +16,7 @@
         </div>
             
         <ion-list>
-            <ion-item class="item-icon-left" ng-repeat="t in tarefas | filter:filtro"> <!-- ng-hide="t.concluida"-->
+            <ion-item class="item-icon-left" ng-repeat="t in tarefas | filter:filtro" ng-click="editar(t.id)"> <!-- ng-hide="t.concluida"-->
                 <!--<i class="{{(t.concluida ? 'ion-android-done-all' : 'ion-android-done')}}"></i>-->
                 <i ng-class="{&apos;icon ion-android-done-all&apos; : t.concluida, &apos;icon ion-android-done&apos; : !t.concluida}"></i>
                 {{t.texto}}
